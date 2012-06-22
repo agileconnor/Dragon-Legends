@@ -3,6 +3,7 @@
  * and open the template in the editor.
  */
 package Login;
+import Database.Database;
 import Input.UserInput;
 import java.sql.Connection;
 import java.sql.ResultSet;
