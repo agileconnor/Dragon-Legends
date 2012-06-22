@@ -1,4 +1,4 @@
-This Application is a text based game. Please go to https://github.com/agileconnor/Dragon-Wars/wiki .
+This Application is a text based game. Please go to https://github.com/agileconnor/Dragon-Wars/wiki for more information.
 
 Dragon Wars
 Made by:
