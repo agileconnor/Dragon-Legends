@@ -11,6 +11,11 @@ import java.io.InputStreamReader;
  * @author Connor
  */
 public class UserInput {
+    /**
+     * Simple Code for retrieving user input from the command prompt. 
+     * Returns: String
+     * @return
+     */
     public static String get() {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String input = null;
