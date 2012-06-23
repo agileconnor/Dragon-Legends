@@ -19,7 +19,7 @@ public class DragonWars {
         System.out.println("Please Login: ");
         Boolean LoginSuc = Login.LoginStart();
         if (LoginSuc == true) {
-            System.out.println("Login Succesful");
+            System.out.println("Login Succesful!");
         }else{
             System.out.println("Login Failed");
         }
