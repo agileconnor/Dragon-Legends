@@ -90,4 +90,23 @@ public class Data {
         }
         return Enemies;
     }
+    public static int getTech(String Nation) throws SQLException {
+        int Tech = 0;
+        Connection con = Database.getConnection();
+        Statement stmt = null;
+        String query = "select * from DragonWars.NationInfo where Name = '" + Nation + "'";
+        try {
+            stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery(query);
+            Tech = rs.getInt(Tech);
+        }catch (SQLException e) {
+            System.out.println("Retrival Error!");
+            System.out.println("SQL Error: " + e.getMessage());
+            System.out.println("SQL State: " + e.getSQLState());
+            System.out.println("VendorError: " + e.getErrorCode());
+        }finally{
+            if (stmt != null) { stmt.close(); }
+        }
+        return Tech;
+    }
 }

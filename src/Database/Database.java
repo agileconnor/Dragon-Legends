@@ -19,7 +19,7 @@ public class Database {
         }
         Connection conn = null;
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/DragonWars" + "user=root&password=cb5024");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/DragonWars?user=root&password=cb5024");
         }catch(SQLException ex) {
             System.out.println("SQLexception: " + ex.getMessage());
             System.out.println("SQLState: " + ex.getSQLState());

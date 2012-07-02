@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 package dragonwars;
-import Login.Login;
+import Account.Login;
 import java.sql.SQLException;
 /**
  *
