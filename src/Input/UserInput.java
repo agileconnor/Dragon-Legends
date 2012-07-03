@@ -25,6 +25,6 @@ public class UserInput {
             System.out.println("Input Error!");
             System.exit(1);
         }
-        return input;
+        return input; 
     }
 }

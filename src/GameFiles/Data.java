@@ -18,11 +18,13 @@ public class Data {
         int Count = 0;
         Connection con = Database.getConnection();
         Statement stmt = null;
-        String query = "select * from DragonWars.NationInfo where Name = '" + Name + "'";
+        String query = "select * from NationInfo where Name = '" + Name + "'";
         try {
             stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(query);
-            Count = rs.getInt("TroopCount");
+            if (rs.first() == true) {
+                Count = rs.getInt("TroopCount");
+            }
         }catch (SQLException e) {
             System.out.println("Retrival Error!");
             System.out.println("SQL Error: " + e.getMessage());
@@ -37,11 +39,13 @@ public class Data {
         int Count = 0;
         Connection con = Database.getConnection();
         Statement stmt = null;
-        String query = "select * from DragonWars.NationInfo where Name = '" + Nation + "'";
+        String query = "select * from NationInfo where Name = '" + Nation + "'";
         try {
             stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(query);
-            Count = rs.getInt("CivilCount");
+            if (rs.first() == true) {
+                Count = rs.getInt("CivilCount");
+            }
         }catch (SQLException e) {
             System.out.println("Retrival Error!");
             System.out.println("SQL Error: " + e.getMessage());
@@ -56,11 +60,13 @@ public class Data {
         String Allies = null;
         Connection con = Database.getConnection();
         Statement stmt = null;
-        String query = "select * from DragonWars.NationInfo where Name = '" + Nation + "'";
+        String query = "select * from NationInfo where Name = '" + Nation + "'";
         try {
             stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(query);
-            Allies = rs.getString("Allies");
+            if (rs.first() == true) {
+                Allies = rs.getString("Allies");
+            }
         }catch (SQLException e) {
             System.out.println("Retrival Error!");
             System.out.println("SQL Error: " + e.getMessage());
@@ -75,11 +81,13 @@ public class Data {
         String Enemies = null;
         Connection con = Database.getConnection();
         Statement stmt = null;
-        String query = "select * from DragonWars.NationInfo where Name = '" + Nation + "'";
+        String query = "select * from NationInfo where Name = '" + Nation + "'";
         try {
             stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(query);
-            Enemies = rs.getString("Enemies");
+            if (rs.first() == true) {
+                Enemies = rs.getString("Enemies");
+            }
         }catch (SQLException e) {
             System.out.println("Retrival Error!");
             System.out.println("SQL Error: " + e.getMessage());
@@ -94,11 +102,13 @@ public class Data {
         int Tech = 0;
         Connection con = Database.getConnection();
         Statement stmt = null;
-        String query = "select * from DragonWars.NationInfo where Name = '" + Nation + "'";
+        String query = "select * from NationInfo where Name = '" + Nation + "'";
         try {
             stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery(query);
-            Tech = rs.getInt(Tech);
+            if (rs.first() == true) {
+                Tech = rs.getInt(Tech);
+            }
         }catch (SQLException e) {
             System.out.println("Retrival Error!");
             System.out.println("SQL Error: " + e.getMessage());

@@ -15,7 +15,7 @@ public class DragonWars {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws SQLException {
-        System.out.println("Dragon Wars v .02 Loaded");
+        System.out.println("Dragon Wars v .07 Loaded");
         System.out.println("Please Login: ");
         Boolean LoginSuc = Login.LoginStart();
         if (LoginSuc == true) {
